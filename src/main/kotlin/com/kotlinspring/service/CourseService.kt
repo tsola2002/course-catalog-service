@@ -1,4 +1,4 @@
-package com.kotlinspring.controller
+package com.kotlinspring.service
 
 import com.kotlinspring.dto.CourseDTO
 import com.kotlinspring.entity.Course
@@ -25,6 +25,14 @@ class CourseService(val courseRepository: CourseRepository) {
             CourseDTO(it.id, it.name, it.category)
         }
 
+    }
+
+    fun retrieveAllCourses(): List<CourseDTO> {
+
+        return courseRepository.findAll()
+                .map {
+                    CourseDTO(it.id, it.name, it.category)
+                }
     }
 
 }
