@@ -29,6 +29,8 @@ dependencies {
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("org.springframework.boot:spring-boot-starter-web")
 	testImplementation("org.springframework.boot:spring-boot-starter-webflux")
+	testImplementation("io.mockk:mockk:1.10.4")
+	testImplementation("com.ninja-squad:springmockk:3.0.1")
 
 	// logging
 	implementation("io.github.microutils:kotlin-logging-jvm:2.0.11")
